@@ -1,0 +1,532 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  }
+ 
+
+
+
+  .container{
+    max-width: 1440px;
+    width: 100%;
+    margin: 0 auto;
+   
+  
+  }
+  
+  .footer{
+    background-color: #111;
+    color: white;
+    line-height: 1;
+    padding: 3rem 0;
+    
+  }
+  .newsletter{
+    display: flex;
+    justify-content: space-between;
+    padding-bottom:4rem ;
+     border-bottom: 1px solid white;  /* ----------  Shadow applying remaining */
+  }
+  .subsribe-news h2{
+    font-size: 1.4rem;
+    font-weight: 400;
+    margin-bottom: 1rem;
+  }
+  .subsribe-news p{
+    font-size: 1rem;
+    width: 35ch;
+  }
+  
+  .search-container
+  {
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     width: 50%;
+  }
+  .search-container .search{
+    width: 100%;
+    align-self: flex-start; 
+  } 
+  .search-container input{
+    width: 100%;
+    padding: 0.8rem;
+    border-radius: 1.5rem;
+    border-style: none;
+    outline: none;
+    font-size: 0.9  rem;
+  }
+  .search-container .btn{   
+    align-self: flex-start; 
+    text-decoration: none;
+    color: white;                 /* Defining an Actual Button For javascript functionality*/
+    background-color:orange;
+    font-size: 1rem;
+    padding: 0.8rem;
+    border-radius: 1rem;
+    margin-left: 0.9rem;
+  }
+  .search-container .btn:hover{
+    border-radius: 0.9rem;
+    font-size: 1.1rem;
+  }
+  .social-links i{
+    margin-left: 1rem;
+    transition: 0.3s;
+  }
+  .social-links .fa-instagram:hover,
+  .social-links .fa-square-facebook:hover,
+  .social-links .fa-twitter:hover
+  {
+    transform: rotateY(180deg);        
+ /* Adding color or colored logo */
+  }
+  
+  .link{
+    display: flex;
+    justify-content: space-between;
+    gap: 3rem;
+    margin-top: 3rem;
+  }
+  
+  .logo-div{
+    width: 20%;
+  }
+  
+  .camping-rlatd2{
+    margin-left: 16rem;
+  }
+  .first-halflist,
+  .second-halflist
+  {
+    display: flex;
+    justify-content: space-around;
+    width: 50%;
+  }
+  .links {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1.5rem;
+    color: grey;
+    text-decoration: none;
+  }
+  .links:hover{
+    color: white;
+  }
+  .link p{
+     color: orange;
+     font-size: 1.2rem;
+     font-weight: 500;
+     margin-bottom: 2rem;
+  }
+  .quickies{
+    margin-right: 4rem;
+  }
+  .L{
+    color: orange;
+    font-size:xx-large;
+  }
+  
+  
+  @media (max-width:1000px){
+    .newsletter{
+      flex-direction: column;
+      gap: 2rem;
+    }
+    .search-container{
+      width: 100%;
+    }
+    .link{
+      flex-direction: column;
+    }
+    .first-halflist,
+    .second-halflist{
+      justify-content: space-between;
+      width: 70%;
+    }
+    .logo-div{
+        width: 50%;
+      }
+  }
+  @media(max-width:600px){
+    .first-halflist,
+    .second-halflist{
+      flex-direction: column;
+    }
+    .search-container{
+      flex-direction: column;
+  
+    }
+    .search-container .btn{
+      margin: 1rem 0 0 0;
+      width: 100%;
+      text-align: center;
+    }
+    .camping-rlatd2{
+      margin-left: 0;
+    }
+    .logo-div{
+        width: 70%;
+      }
+  }
+    .copyright{
+      margin-top: 2%;
+      font-size: 100%;
+    }
+    
+    
+  /*-------------------------------------------New Page------------------------------------------------------------------*/
+  
+
+  .BBC{
+    color: orange;
+    font-size:xx-large;
+  }
+  
+  
+  .showcase{
+    right: 0;
+    width: 100%;
+    min-height: 100vh;
+    padding: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: aliceblue;
+    z-index: 2;
+  }
+  
+  .showcase.active{
+    right: 300px;
+  }
+  
+  .showcase header{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 40px 100px;
+     z-index: 1000;
+     display: flex;
+     align-items: center;
+     justify-content: space-between;
+    }
+  .logo{
+    text-transform: uppercase;
+    cursor: pointer;
+  }
+  
+  .toggle{
+    position: relative;
+    width: 60%;
+    height: 60px;
+    background: url(/Minis/menu\ \(1\).png);
+    background-repeat: no-repeat;
+    background-size: 40px;
+    background-position: center;
+    cursor: pointer;
+  }
+  .toggle.active{
+    background: url(Minis/xmark-solid.svg);
+    background-repeat: no-repeat;
+    background-size: 25px;
+    background-position: center;
+  }
+  
+  .showcase video{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.8;
+  }
+  .overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: gray;
+    mix-blend-mode: overlay;
+  }
+  .texts{
+    position: relative;
+    z-index: 15;
+  }
+.texts h2{
+    font-size: 3rem;
+    font-weight: 800;
+    line-height: 1em;
+  }
+  .texts h3{
+    
+    font-size: 2rem;
+    font-weight: 600;
+    line-height: 1em;
+  }
+  .texts p{
+    font-size: 1.2rem;
+    font-weight: 400;
+    max-width: 700px;
+  }
+  
+  .texts a{
+    display: inline-block;
+    font-size: 1em;
+    background:orange;
+    text-decoration: none;
+    padding: 10px 30px;
+    color: #111;
+    margin-top: 10px;
+    border-radius: 5px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: 0.2s;   
+  }
+  .light{
+    background-color: white;
+  height: 100vh;
+}
+.texts a:hover{
+  letter-spacing: 2px;
+}
+/* .social{
+  position:absolute;
+  bottom: 20px;
+  z-index: 10;
+  display: flex;
+  justify-content: center;
+}
+.social li{
+  list-style: none;
+}
+.social li a{
+  display: inline-block;
+  filter: invert(1);
+  margin-right: 20px;
+  transform: scale(0.5);
+  transition: 0.5s;
+}
+.social li a:hover{
+  transform: scale(0.5) translateY(-15px);
+} */
+
+
+@media(max-width: 991px)
+{
+  .showcase,
+  .showcase header{
+    padding: 40px;
+  }
+  .texts h2{
+    font-size:2rem;
+  }
+  .texts h3{
+    font-size: 1.5rem;
+  }
+}
+
+
+
+/* ----------------------------Secondpage------------------------------------------------------ */
+
+
+
+
+.secondcont{
+  display: flex;
+  background-color: rgb(50, 52, 78);
+  margin: 1%;
+  justify-content: space-between;
+}
+.secondcont img{
+  padding-top: 4%;
+  padding-bottom: 4%;
+  margin-left: 4%;
+  width: 28%;
+  height: 30%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  transition:0.7s ease-out ;
+}
+.secondcont img:hover{
+  transform: scale(1.05);
+}
+.secondcontext{
+  color: white;
+  
+  padding-left: 2%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.secondcontext h3{
+  font-size: 2.5rem;
+  margin-bottom: 1%;
+}
+.secondcont p{
+  font-size: 1.5rem;
+  font-weight: 500;
+  margin-bottom: 1% ;
+}
+
+.secondcontext-btn{
+  text-decoration: none;
+  color: rgb(0, 0, 0);
+  font-size: 1.1rem;
+  font-weight: 450;
+  background-color: orange;
+  width: fit-content;
+  padding: 0.8%;
+  border-radius: 5px;
+  margin-bottom: 1%;
+  transition: 0.2s ease-in;
+}
+.secondcontext-btn:hover{
+  letter-spacing: 1.5px;
+}
+@media(max-width: 460px)
+{
+  .secondcont img{
+    padding-top: 30%;
+    margin-left: 2%;
+  }
+  
+}
+@media(max-width: 690px){
+  .secondcontext h3{
+    font-size: 1rem;
+  }
+  .secondcontext p{
+    font-size:0.7rem ;
+  }
+}
+
+@media(max-width: 1000px)
+{
+  .secondcontext{
+    margin-left: 1%;
+  }
+  .secondcontext h3{
+    font-size: 1.5rem;
+  }
+  .secondcontext p{
+    font-size: 1rem;
+    font-weight: 400;
+    margin-bottom: 2%;
+  }
+  .secondcontext-btn{
+    text-align: center;
+    font-size: 1rem;
+    width: 100%;
+    margin-bottom: 2%;
+  }
+}
+
+
+/* --------------------------------------Third Page--------------------------------------------- */
+
+
+#thirdpage{
+  display: flex;
+  justify-content: space-around;
+  background-color: rgb(50, 52, 78);
+  margin: 1%;
+  padding: 3%;
+  color: white;
+}
+.cartext h3{
+  font-size: 2rem;
+  margin-bottom: 1%;
+}
+.cartext ul{
+  list-style: none;
+  font-size: 1.5rem;
+  font-weight: 400;
+  margin-bottom: 2%;
+}
+.l2
+{
+  margin-top: 1%;
+}
+.cartext a{
+  text-decoration: none;
+  color: rgb(0, 0, 0);
+  background-color: orange;
+  padding: 0.8%;
+  border-radius: 5px;
+  transition: 0.2s;
+  font-weight: 450;
+  font-size: 1.1rem;
+}
+.cartext a:hover{
+  letter-spacing: 1.3px;
+}
+
+#thirdpage img{
+  transition: 0.5s ease-out;
+  width: 100%;
+}
+#thirdpage img:hover{
+  transform: scale(1.05);
+}
+@media(max-width:1100px){
+  #thirdpage{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  #thirdpage img{
+    order: 2;
+    width: 80%;
+  }
+  .cartext{
+    order: 1;
+  }
+  .cartext h3{
+    font-size: 1.5rem;
+  }
+  .cartext ul{
+    font-size: 1rem;
+  }
+  .nbar{
+    position: sticky;
+    bottom: 0;
+    background-color:gray;
+    height: 8vh;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    z-index: 7;
+  }
+  .nbar a{
+    text-decoration: none;
+    color: orange;
+    font-size: 2rem;
+    font-weight: 800;
+  
+  }
+
+}
+@media(max-width:710px)
+{
+  #thirdpage img{
+    width: 100%;
+  }
+  
+
+}
+@media(min-width:1000px)
+{
+  .nbar{
+    display: none;
+  }
+}
+  
