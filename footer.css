@@ -344,7 +344,6 @@
 .secondcont{
   display: flex;
   background-color: rgb(50, 52, 78);
-  margin: 1%;
   justify-content: space-between;
 }
 .secondcont img{
@@ -441,7 +440,6 @@
   display: flex;
   justify-content: space-around;
   background-color: rgb(50, 52, 78);
-  margin: 1%;
   padding: 3%;
   color: white;
 }
